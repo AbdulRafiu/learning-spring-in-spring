@@ -1,4 +1,4 @@
-package com.abdul;
+package com.abdul.interfaces;
 
 public interface MoodService {
 	

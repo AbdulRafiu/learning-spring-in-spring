@@ -5,18 +5,16 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
 	
-	<bean id="myMood" class="com.abdul.HappyMoodService" />
+	<bean id="myMoodIsHappy" class="com.abdul.models.HappyMoodService" />
 	
-	<bean id="person" class="com.abdul.Employee">
-		<constructor-arg ref="myMood" />
+	<bean id="myMoodIsSad" class="com.abdul.models.SadMoodService" />
+	
+	<bean id="employed" class="com.abdul.models.Employee">
+		<constructor-arg ref="myMoodIsHappy" />
 	</bean>
 	
-	<!-- Add a logger config to see logging messages.		
-	- For more detailed logs, set values to "FINEST"
-	- For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html -->
-    <bean id="LoggerConfig" class="com.abdul.LoggerConfig" init-method="initLogger">
-    	<property name="rootLoggerLevel" value="FINE" />
-    	<property name="printedLoggerLevel" value="FINE"/>
-    </bean>
+	<bean id="unemployed" class="com.abdul.models.UnEmployed">
+		<property name="sadMoodService" ref="myMoodIsSad" />
+	</bean>
     
 </beans>

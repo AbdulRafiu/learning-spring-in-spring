@@ -1,4 +1,6 @@
-package com.abdul;
+package com.abdul.models;
+
+import com.abdul.interfaces.MoodService;
 
 public class HappyMoodService implements MoodService {
 

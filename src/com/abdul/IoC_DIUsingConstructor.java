@@ -2,7 +2,10 @@ package com.abdul;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+import com.abdul.interfaces.Person;
+import com.abdul.models.Employee;
+
+public class IoC_DIUsingConstructor {
 
 	public static void main(String[] args) {
 		
@@ -10,7 +13,7 @@ public class Main {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// Retrieving the wanted Bean -- IOC
-		Person person = context.getBean("person", Employee.class);
+		Person person = context.getBean("employed", Employee.class);
 		
 		// Initializing the employee object using traditional way
 		Person person2 = new Employee();

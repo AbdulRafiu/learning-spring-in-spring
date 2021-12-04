@@ -1,4 +1,6 @@
-package com.abdul;
+package com.abdul.models;
+
+import com.abdul.interfaces.Person;
 
 public class Employee implements Person{
 	
@@ -9,8 +11,8 @@ public class Employee implements Person{
 		super();
 	}
 
-	public Employee(HappyMoodService myMood) {
-		happyMoodService = myMood;
+	public Employee(HappyMoodService myMoodIsHappy) {
+		happyMoodService = myMoodIsHappy;
 	}
 
 	@Override
