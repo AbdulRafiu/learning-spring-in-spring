@@ -9,6 +9,7 @@
     
     	
 	<!-- Loading the properties file -->
+	
 	<context:property-placeholder location="classpath:application.properties" />
 	
 	<!-- bean definitions here -->
@@ -28,7 +29,7 @@
 	</bean>
 	
 	<!-- Bean custom processor to handle calling destroy methods on prototype scoped beans -->
-    <bean id="customProcessor" class="MyCustomBeanProcessor">
-   	</bean>
+	
+	<bean id="customProcessor" class="MyCustomBeanProcessor" />
     
 </beans>
