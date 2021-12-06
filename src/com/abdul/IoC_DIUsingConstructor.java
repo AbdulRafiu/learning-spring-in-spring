@@ -28,6 +28,7 @@ public class IoC_DIUsingConstructor {
 		person.eats();
 		System.out.println(person2.talks());
 		System.out.println(person2.isAsleep());
+		
 		// Calling getMood on person2 withh produce an error!
 		// Dare to uncomment the next line??? you are welcome!
 		// System.out.println(person2.getMood());
@@ -43,6 +44,10 @@ public class IoC_DIUsingConstructor {
 		System.out.println(person.talks());
 		System.out.println(person.isAsleep());
 		System.out.println(person.getMood());
+		
+		// Getting Literal Values
+		System.out.println(((Employee) person).getEmpId());
+		System.out.println(((Employee) person).getEmpName());
 		
 		//Closing the context
 		context.close();
